@@ -1,0 +1,13 @@
+[Unit]
+Description=whatsapp server
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=5
+ExecStart=/home/developer/whatsapp_env/bin/python /home/developer/whatsapp_gateway/run.py
+
+[Install]
+# WantedBy=multi-user.target * use this to start up process with the user
+# Use this if you want to start on boot
+WantedBy=default.target
